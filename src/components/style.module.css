@@ -1,0 +1,124 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.heading,
+.favoriteHeading {
+	font-size: 3rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	color: white;
+}
+
+.selectSection {
+	display: flex;
+	align-items: center;
+}
+
+.selectSectionText {
+	font-size: 1rem;
+	color: white;
+	margin-right: 0.5rem;
+}
+select {
+	font-size: 1rem;
+	border-radius: 0.3rem;
+	padding: 0.3rem;
+}
+
+.poem {
+	width: 50vw;
+	height: auto;
+	border-radius: 0.4rem;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	background-color: #eff2f5;
+}
+
+.poemInfo {
+	font-size: 2rem;
+	padding: 0.5rem;
+}
+
+.author {
+	font-weight: bold;
+}
+
+button {
+	padding: 0.4rem;
+	border-radius: 0.3rem;
+	margin: 0.3rem;
+	font-size: 1rem;
+}
+
+.details {
+	background-color: #54a0ff;
+	color: white;
+	border: 0.1rem solid #2e86de;
+}
+.details:active {
+	background-color: #2e86de;
+	border: 0.1rem solid #54a0ff;
+}
+
+.line {
+	padding: 0.3rem;
+	font-size: 1.2rem;
+}
+
+.addToFavorites {
+	background-color: #1dd1a1;
+	border: 0.1rem solid #10ac84;
+	color: white;
+}
+
+.addToFavorites:active {
+	background-color: #10ac84;
+	border: 0.1rem solid #1dd1a1;
+}
+
+.removeToFavorites {
+	background-color: #ff6b6b;
+	border: 0.1rem solid #ee5253;
+}
+.removeToFavorites:active {
+	background-color: #ee5253;
+	border: 0.1rem solid #ff6b6b;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.poem {
+		width: 80vw;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.poem {
+		width: 80vw;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {
+	.poem {
+		width: 88vw;
+	}
+} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.poem {
+		width: 70vw;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	.poem {
+		width: 50vw;
+	}
+}

@@ -1,0 +1,16 @@
+.main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.fetchPoems {
+	width: 13rem;
+	height: 5rem;
+	padding: 0.5rem;
+	border-radius: 0.4rem;
+	font-size: 1.7rem;
+	color: black;
+	font-weight: bold;
+}

@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { fetchPoems } from "./api";
+import { usePoems } from "./context/poemContext";
+import PoemList from "./components/PoemList";
+
+import style from "./App.module.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const { setPoems } = usePoems();
+	const [loading, setLoading] = useState(false);
+
+	const buttonHandler = async () => {
+		setLoading(true);
+		const poemList = await fetchPoems();
+		setPoems(poemList);
+		setLoading(false);
+	};
+
+	return (
+		<div className={style.main}>
+			<button onClick={buttonHandler} className={style.fetchPoems}>
+				{loading ? "Loading..." : "Fetch Poems"}
+			</button>
+			<PoemList />
+		</div>
+	);
 }
 
 export default App;
